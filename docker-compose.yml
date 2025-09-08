@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  workout-bot:
+    build: .
+    container_name: workout-telegram-bot
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+      - BOT_TOKEN=${BOT_TOKEN}
+      - DEVELOPER_ID=${DEVELOPER_ID}
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - bot-network
+
+networks:
+  bot-network:
+    driver: bridge
