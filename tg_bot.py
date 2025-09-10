@@ -14,10 +14,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Токен вашего бота (получите у @BotFather)
-BOT_TOKEN = os.getenv('BOT_TOKEN', "8372338985:AAGgXkhF7x0f3kDpO2Dd1LKfcv3PTUTsMAI")
+BOT_TOKEN = os.getenv('BOT_TOKEN', "")
 
 # ID разработчика (замените на ваш Telegram ID)
-DEVELOPER_ID = int(os.getenv('DEVELOPER_ID', 766824340))
+DEVELOPER_ID = int(os.getenv('DEVELOPER_ID', #766824340))
 
 # Отключаем предупреждения httpx
 import warnings
@@ -817,3 +817,4 @@ def main():
 if __name__ == '__main__':
 
     main()
+
